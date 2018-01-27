@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #pyramid {
+                line-height:0;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pyramid Slide</h1>
+        <br>
+
+        <label>Brick Symbol:
+            <select id='char-choice'>
+                <option>#</option>
+                <option>$</option>
+                <option>@</option>
+                <option>%</option>
+            </select>
+        </label>
+
+        <label>How High?
+            <input type='range' id='pyramid-height' min='1' max='20' />
+        </label>
+        <p id='counter'></p>
+
+        <script src="pyramid.js"> </script>
+    
+    </body>
+
+</html>
