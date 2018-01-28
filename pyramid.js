@@ -1,20 +1,29 @@
 //Add Event listener  for number next to slider
-slider = document.getElementById('pyramid-height');
-//slider.addEventListener("oninput",updateCounterandDrawPyramid(this.value));
-slider.addEventListener("oninput",console.log(slider.value));
-console.log(slider.value);
+slider = document.getElementById('pyramidHeight');
+console.log(slider);
+slider.addEventListener('input',updateCounterandDrawPyramid);
 
-function updateCounterandDrawPyramid(val){
+
+//Add event handler for character selection
+charChoice = document.getElementById('char-choice');
+charChoice.addEventListener('change', drawPyramid);
+
+function updateCounterandDrawPyramid(){
     //update slider counter
+    val = document.getElementById('pyramidHeight').value;
     sliderLabel = document.getElementById('counter');
     sliderLabel.innerHTML = val;
 
-    drawPyramid(val);
+    drawPyramid();
    
 
 }
 
-function drawPyramid(val){
+function drawPyramid(){
+
+     //get pyramid height
+     val = document.getElementById('pyramidHeight').value;
+
      //get pyramid symbol
      pyramidChar = document.getElementById("char-choice").value;
 
@@ -34,7 +43,8 @@ function drawPyramid(val){
          //build a string for the row
          var rowStr = "";
          for (var i = 0; i < numSpaces; i++) {
-             rowStr += ".";
+             var spaceChar = "&nbsp;";
+             rowStr += spaceChar;
          }
          for (var i = 0; i < numBricks; i++){
              rowStr += pyramidChar;
