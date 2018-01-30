@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+            <link rel='stylesheet' type='text/css' href='stylesheet.css' />
         <style>
             #pyramid {
                 line-height:0;
@@ -10,25 +11,25 @@
     </head>
     <body>
         <h1>Pyramid Slide</h1>
-        <br>
+        
+        <div class='main-space'>
+            <label>Brick Symbol:
+                <select id='char-choice'>
+                    <option>#</option>
+                    <option>$</option>
+                    <option>@</option>
+                    <option>%</option>
+                </select>
+            </label>
 
-        <label>Brick Symbol:
-            <select id='char-choice'>
-                <option>#</option>
-                <option>$</option>
-                <option>@</option>
-                <option>%</option>
-            </select>
-        </label>
+            <label>How High?
+                <input type='range' id='pyramidHeight' min="1" max="20" value='5' />
+            </label>
+            <span id='counter'></span>
 
-        <label>How High?
-            <input type='range' id='pyramidHeight' min="1" max="20" value='5' />
-        </label>
-        <p id='counter'></p>
-
-        <br>
-        <div id="pyramid"></div>
-
+            <br>
+            <div id="pyramid"></div>
+        </div>
         <script src="pyramid.js"> </script>
     
     </body>

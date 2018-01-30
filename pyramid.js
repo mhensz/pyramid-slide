@@ -38,24 +38,21 @@ function drawPyramid(){
  
          //figure out numeber of bricks and spaces
          var numBricks = row+2;
-         var numSpaces = height -row -1;
+         var numSpaces = height -row;
  
          //build a string for the row
          var rowStr = "";
          for (var i = 0; i < numSpaces; i++) {
-             var spaceChar = "&nbsp;";
+             var spaceChar = "&nbsp";
              rowStr += spaceChar;
          }
          for (var i = 0; i < numBricks; i++){
              rowStr += pyramidChar;
          }
  
-         //create a text element with the string of characters
-         textElem = document.createTextNode(rowStr);
- 
          //create a <p> element with the text inside
          rowElem = document.createElement("p");
-         rowElem.appendChild(textElem);
+         rowElem.innerHTML = rowStr;
  
          //insert the paragraph into the div
          document.getElementById("pyramid").appendChild(rowElem);

@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+}
+
+label {
+    padding: 10px;
+    font-weight: bold;
+}
+
+h1 {
+    background-color: purple;
+    color: lightgrey;
+    font-size: 50px;
+}
+
+select {
+    border-radius: 5px;
+}
+
+.main-space {
+    border: solid 5px purple;
+    margin: 10px 50px;
+}
+
+#pyramid {
+    text-align: right;
+    margin: auto;
+    width: 25%;
+   
+}
